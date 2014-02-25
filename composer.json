@@ -1,0 +1,15 @@
+{
+	"name": "majkl578/nette-appengine-sandbox",
+	"description": "Sandbox for running Nette on Google App Engine.",
+	"license": ["MIT"],
+	"authors": [
+		{
+			"name": "Michael Moravec"
+		}
+	],
+	"require": {
+		"php": ">=5.3.1",
+		"nette/nette": "2.1.*",
+		"majkl578/nette-appengine": "@dev"
+	}
+}
