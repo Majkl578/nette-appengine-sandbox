@@ -1,0 +1,33 @@
+# adjust your configuration and save it as app.yaml
+# see https://developers.google.com/appengine/docs/php/config/appconfig
+
+application: example-changeme
+version: 1
+runtime: php
+api_version: 1
+
+
+skip_files:
+- ^(.+/)*\.htaccess$
+- ^(.+/)*\.git$1
+- ^(.+/)*\.gitignore$
+- tests
+
+
+handlers:
+
+# ignore some dirs with static files
+- url: /css
+  static_dir: www/css
+- url: /scripts
+  static_dir: www/scripts
+- url: /gfx
+  static_dir: www/gfx
+
+# handle everything else by Nette
+- url: /.*$
+  script: www/index.php
+
+
+env_variables:
+  appengine: yes
